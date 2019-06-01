@@ -1,0 +1,10 @@
+D:\cg\Neuer Ordner\ComputergrafikMIB-master\Tut09_HierarchyAndInputCompleted\bin\Debug\netstandard2.0\Assets\AboutFuseeAssets.txt
+D:\cg\Neuer Ordner\ComputergrafikMIB-master\Tut09_HierarchyAndInputCompleted\bin\Debug\netstandard2.0\Tut09_HierarchyAndInputCompleted.deps.json
+D:\cg\Neuer Ordner\ComputergrafikMIB-master\Tut09_HierarchyAndInputCompleted\bin\Debug\netstandard2.0\Tut09_HierarchyAndInputCompleted.dll
+D:\cg\Neuer Ordner\ComputergrafikMIB-master\Tut09_HierarchyAndInputCompleted\bin\Debug\netstandard2.0\Tut09_HierarchyAndInputCompleted.pdb
+D:\cg\Neuer Ordner\ComputergrafikMIB-master\Tut09_HierarchyAndInputCompleted\obj\Debug\netstandard2.0\Tut09_HierarchyAndInputCompleted.csprojAssemblyReference.cache
+D:\cg\Neuer Ordner\ComputergrafikMIB-master\Tut09_HierarchyAndInputCompleted\obj\Debug\netstandard2.0\Tut09_HierarchyAndInputCompleted.csproj.CoreCompileInputs.cache
+D:\cg\Neuer Ordner\ComputergrafikMIB-master\Tut09_HierarchyAndInputCompleted\obj\Debug\netstandard2.0\Tut09_HierarchyAndInputCompleted.AssemblyInfoInputs.cache
+D:\cg\Neuer Ordner\ComputergrafikMIB-master\Tut09_HierarchyAndInputCompleted\obj\Debug\netstandard2.0\Tut09_HierarchyAndInputCompleted.AssemblyInfo.cs
+D:\cg\Neuer Ordner\ComputergrafikMIB-master\Tut09_HierarchyAndInputCompleted\obj\Debug\netstandard2.0\Tut09_HierarchyAndInputCompleted.dll
+D:\cg\Neuer Ordner\ComputergrafikMIB-master\Tut09_HierarchyAndInputCompleted\obj\Debug\netstandard2.0\Tut09_HierarchyAndInputCompleted.pdb
