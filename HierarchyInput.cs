@@ -198,11 +198,10 @@ namespace Fusee.Tutorial.Core {
                                                         Specular = new SpecularChannelContainer { Color = new float3(1, 1, 1), Shininess = 5 }
                                                     },
                                                     SimpleMeshes.CreateCuboid(new float3(2, 5, 2))
-                                                }
-                                                
-                                                    }
-                                                }
-                                        },
+                                                }   
+                                            }
+                                        }
+                                    },
                                     //Finger 3
                                 	new SceneNodeContainer
                                     {
@@ -210,12 +209,12 @@ namespace Fusee.Tutorial.Core {
                                         {
                                             _finger3,
                                         },
-                                        Children = new List<SceneNodeContainer>
-                                        {
+                                        Children = new List<SceneNodeContainer> {
+                                        
                                              new SceneNodeContainer{
                                                  
-                                                Components = new List<SceneComponentContainer>
-                                                {
+                                                Components = new List<SceneComponentContainer> {
+                                                
                                                     new TransformComponent{
                                                         Rotation = new float3(0,0,0),
                                                         Scale = new float3(1,1,1),
@@ -228,15 +227,15 @@ namespace Fusee.Tutorial.Core {
                                                         Specular = new SpecularChannelContainer { Color = new float3(1, 1, 1), Shininess = 5 }
                                                     },
                                                     SimpleMeshes.CreateCuboid(new float3(2, 5, 2))
-                                                }
+                                                }       
                                                 
-                                                    }
                                                 }
+                                            }
                                         }
                                     }
                                     }    
                                 }
-                            },
+                            }
                         }
                     }
                 }
@@ -268,28 +267,32 @@ namespace Fusee.Tutorial.Core {
             float forearm = _foreArmTransform.Rotation.x;
             forearm += 0.5f * Keyboard.UpDownAxis * DeltaTime;
             _foreArmTransform.Rotation = new float3(forearm,0,0);
-            //finger 
+            //finger rotation initialisation
             float _finger1_move = _finger1.Rotation.x;
+            float _finger2_move = _finger2.Rotation.x;
+            float _finger3_move = _finger3.Rotation.z;
+
+            //Move the fingers to grab position
             if(Mouse.MiddleButton == true ){
                 if(_finger1_move>-0.108f){_finger1_move -= 0.4f * DeltaTime;}
                 _finger1.Rotation = new float3(_finger1_move,0,0);
-            }
-            float finger1_unmove = _finger1.Rotation.x;
-            if(Mouse.RightButton == true){
-                if(_finger1_move<0.4f){_finger1_move += 0.4f * DeltaTime;}
-                _finger1.Rotation = new float3(_finger1_move,0,0);
-            }
-             float _finger2_move = _finger2.Rotation.x;
-            if(Mouse.MiddleButton == true ){
                 if(_finger2_move<0.108f){_finger2_move += 0.4f * DeltaTime;}
                 _finger2.Rotation = new float3(_finger2_move,0,0);
+                if(_finger3_move<0.108){_finger3_move += 0.4f * DeltaTime;}
+                _finger3.Rotation = new float3(0,0,_finger3_move);
+
             }
-            float finger2_unmove = _finger1.Rotation.x;
-            if(Mouse.LeftButton == true){
+            //Move the fingers of the arm to opened position
+            if(Mouse.RightButton == true){
+                if(_finger1_move<=0.4f){_finger1_move += 0.4f * DeltaTime;}
+                _finger1.Rotation = new float3(_finger1_move,0,0);
                 if(_finger2_move>=-0.4f){_finger2_move -= 0.4f * DeltaTime;}
                 _finger2.Rotation = new float3(_finger2_move,0,0);
+                if(_finger3_move>=-0.3f){_finger3_move -= 0.4f * DeltaTime;}
+                _finger3.Rotation = new float3(0,0,_finger3_move);
+
             }
-           
+                 
             // Clear the backbuffer
             RC.Clear(ClearFlags.Color | ClearFlags.Depth);
             if(Mouse.LeftButton == true){
